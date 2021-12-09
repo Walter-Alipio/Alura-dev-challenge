@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Dev</title>
+
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/menu-esquerdo.css">
+    <link rel="stylesheet" href="CSS/menu-direita.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="assets/Header/Logo.svg" alt="Logo Alura Dev" class="logo__alura">
+        <input type="search" class="barra__busca" placeholder="Busque por aqui">
+        <button class="button__usuario"> 
+            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+            <p class="login__name">Harry</p>
+        </button>
+    </header>
+
+    <main class="principal">
+
+ <!-- menu lateral esquerdo -->      
+        <nav class="menu__lateral"> 
+            <p class="menu__lateral__title">MENU</p>
+            <a href="index.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
+            <a href="#" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
+        </nav>
+
+ <!-- area de texto ao centro da página -->
+        <article class="campo__principal">  
+            <div class="campo__janela">          
+                <textarea class="textarea" name="" id="" cols="30" rows="10"></textarea>               
+            </div>
+            <button class="botao__visualizar">Visualizar com highlight</button>
+        </article>
+
+ <!-- menu da lateral direita da página -->
+        <form action="#" class="meu__projeto"> 
+            <p class="meu__projeto__title">Seu projeto</p>
+            <input type="text" name="nome do projeto" placeholder="Nome do seu projeto" class="meu__projeto__box" id="">
+            <textarea name="descricao" id="" cols="30" rows="10" class="meu__projeto__box meu__projeto__descricao" placeholder="Descrição do seu projeto"></textarea>
+            <fieldset class="meu__projeto personalizacao">
+                <p class="meu__projeto__title">Personalizacao</p>
+                <select class="personalizacao__linguagem meu__projeto__box" name="linguagem" id="">
+                    <option class="option" value="JavaScript">JavaScript</option>
+                    <option class="option" value="html">HTML</option>
+                    <option class="option" value="css">CSS</option>
+                </select>
+                <input type="color" value="#6BD1FF" class="personalizacao__cores" name="cores" id="">    
+                <button class="botao__salvar">Salvar projeto</button>
+            </fieldset>
+        </form>
+      
+    </main>
+</body>
+</html>

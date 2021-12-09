@@ -1,0 +1,58 @@
+.cabecalho{
+    display: grid;
+    grid-template-columns: 0.75fr 2fr 1fr;
+    height: 56px;
+    margin: 32px 0;
+}
+
+.logo__alura{
+    width: 145px;
+    margin-left: 32px;
+    align-self: center;
+}
+
+.barra__busca{
+    width: 752px;
+    height: 56px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding-left: 14px;
+    opacity: 0.64;
+    color: #ffffff;
+    border: none;
+    background-color:  rgba(255, 255, 255, 0.16);
+    align-content: flex-start;
+    margin-left: 10px;
+}
+.barra__busca:hover{
+    background-color:  rgba(255, 255, 255, 0.24);
+}
+
+.button__usuario{
+    width: 106px;
+    background-color: #051d3b;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    margin-right: 32px;
+    justify-self: flex-end;
+}
+.button__usuario:hover{
+    background: rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.foto__perfil{
+    width: 32px;
+    height: 32px;
+}
+
+.login__name{
+    color: #ffffff;  
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Inter';
+    margin-left: 8px;
+}
