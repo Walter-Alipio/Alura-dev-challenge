@@ -20,10 +20,12 @@
     <header class="cabecalho">
         <img src="assets/Header/Logo.svg" alt="Logo Alura Dev" class="logo__alura">
         <input type="search" class="barra__busca" placeholder="Busque por aqui">
+        <button class="barra__busca--phone"><i class="fas fa-search"></i></button>
         <button class="button__usuario"> 
             <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
             <p class="login__name">Harry</p>
         </button>
+        <button class="menu__mobile"><i class="fas fa-bars"></i></button> <!--tablet version-->
     </header>
 
     <main class="principal">
@@ -44,7 +46,7 @@
         </article>
 
  <!-- menu da lateral direita da página -->
-        <form action="#" class="meu__projeto"> 
+        <section action="#" class="meu__projeto"> 
             <p class="meu__projeto__title">Seu projeto</p>
             <input type="text" name="nome do projeto" placeholder="Nome do seu projeto" class="meu__projeto__box" id="">
             <textarea name="descricao" id="" cols="30" rows="10" class="meu__projeto__box meu__projeto__descricao" placeholder="Descrição do seu projeto"></textarea>
@@ -58,7 +60,7 @@
                 <input type="color" value="#6BD1FF" class="personalizacao__cores" name="cores" id="">    
                 <button class="botao__salvar">Salvar projeto</button>
             </fieldset>
-        </form>
+        </section>
       
     </main>
 </body>

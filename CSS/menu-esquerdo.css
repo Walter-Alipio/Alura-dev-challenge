@@ -43,3 +43,8 @@ margin-bottom: 2rem;
     background-color: #5081FB;
 }
 
+@media screen and (max-device-width: 1024px) {
+    .menu__lateral{
+        display: none;
+    }
+}

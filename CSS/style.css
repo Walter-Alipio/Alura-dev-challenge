@@ -71,4 +71,40 @@ body{
     background: rgba(80, 129, 251, 0.24);
 }
 
+@media screen and (max-device-width: 1024px){
+    body{
+        padding: 0 32px;
+    }
+    .principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .campo__janela{
+        width: 704px;
+        
+    }
+    .textarea{
+        width: 640px;
+    }
+    .botao__visualizar{
+        width: 704px;
+    }
+}
+
+@media screen and (max-device-width: 768px ){
+    body{
+        padding: 20px;
+    }
+
+    .campo__janela{
+        width: 343px;
+    }
+    .textarea{
+        width: 279px;
+    }
+    .botao__visualizar{
+        width: 343px;
+    }
+}
