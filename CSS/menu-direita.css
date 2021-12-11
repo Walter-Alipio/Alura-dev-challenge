@@ -82,3 +82,57 @@
     background: #7BA4FC;
     border: 4px solid rgba(80, 129, 251, 0.72);
 }
+
+@media screen and (max-device-width: 1024px){
+    .meu__projeto{
+        width: 90vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .meu__projeto__title{
+        align-self: flex-start;
+    }
+    .meu__projeto__box{
+        width: 100%;
+    }
+    .personalizacao--tablet{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;     /* Orientação horizontal*/
+        align-items: center;
+    }
+    
+    .personalizacao{
+        width: 90vw;
+    }
+    .personalizacao__linguagem{
+        width: 48%;
+        height: 3.5em;
+    }
+
+    .personalizacao__cores{
+        width: 48%;
+        height: 3.5em;
+    }
+    .botao__salvar{
+        width: 100%;
+    }
+}
+
+@media screen and (max-device-width: 767px ){
+    .personalizacao--tablet{
+        display: flex;
+        flex-direction: column;
+    }
+    .personalizacao__linguagem{
+        width: 100%;
+        height: 3.5em;
+    }
+
+    .personalizacao__cores{
+        width: 100%;
+        height: 3.5em;
+    }
+}

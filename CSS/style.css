@@ -78,7 +78,8 @@ body{
     .principal{
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /*alinha os itens da coluna*/
+        gap: 32px;
     }
 
     .campo__janela{
@@ -93,18 +94,23 @@ body{
     }
 }
 
-@media screen and (max-device-width: 768px ){
+@media screen and (max-device-width: 767px ){
     body{
         padding: 20px;
     }
-
+    .principal{
+        width: 100%;
+    }
+    .campo__principal{
+        width: 100%;
+    }
     .campo__janela{
-        width: 343px;
+        width: 100%;
     }
     .textarea{
-        width: 279px;
+        width: 98%;
     }
     .botao__visualizar{
-        width: 343px;
+        width: 100%;
     }
 }

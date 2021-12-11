@@ -69,7 +69,7 @@
 
 @media screen and (max-device-width: 1024px ){
     .cabecalho{
-        width: 90vw;
+        width: 87vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -94,7 +94,7 @@
     }
 }
 
-@media screen  and (max-device-width: 768px){
+@media screen  and (max-device-width: 767px){
     .barra__busca{
         display: none;
     }
