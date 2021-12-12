@@ -26,7 +26,7 @@
         </button>
         <div class="botoes__mobile">
             <button class="barra__busca--phone"><i class="fas fa-search"></i></button>
-            <button class="menu__mobile"><i class="fas fa-bars"></i></button> <!--tablet version-->
+            <button class="menu__mobile" data-menu="ativar"><i class="fas fa-bars" data-menu="icone"></i></button> <!--tablet version-->
         </div>
     </header>
 
@@ -37,6 +37,21 @@
             <p class="menu__lateral__title">MENU</p>
             <a href="index.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
             <a href="#" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
+        </nav>
+
+ <!-- menu esquerdo mobile -->
+        <nav class="hide" data-menu="conteudo"> 
+            <div class="botao__menu__mobile botao__menu__mobile--secao">
+                <a href="index.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
+         
+                <a href="#" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
+            </div>
+            <div class="botao__menu__mobile">
+                <button class="button__usuario botao__menu__mobile--usuario"> 
+                    <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                    <p class="login__name">Harry</p>
+                </button>
+            </div>
         </nav>
 
  <!-- area de texto ao centro da página -->
@@ -70,5 +85,6 @@
         </section>
       
     </main>
+    <script src="JS/index.js"></script>
 </body>
 </html>

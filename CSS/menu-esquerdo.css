@@ -43,8 +43,44 @@ margin-bottom: 2rem;
     background-color: #5081FB;
 }
 
+.hide{
+    display: none;
+}
+.menu__lateral__mobile-ativo{
+    width: 15.875rem;
+    height: 100vh;
+    background: #2D415B;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;  
+    position: absolute;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.botao__menu__mobile{
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.botao__menu__mobile--usuario{
+    display: flex;
+    margin:0;
+    align-self: flex-start;
+    background: #2D415B;
+}
+
+.botao__menu__mobile--secao{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+
 @media screen and (max-device-width: 1024px) {
     .menu__lateral{
         display: none;
     }
+   
 }

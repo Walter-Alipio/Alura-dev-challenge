@@ -22,3 +22,9 @@ Sidebar Title: 12px;
 
 
 
+const textarea = document.getElementById('editor')
+
+textarea.addEventListener('input', function (e) {
+  this.style.height = 'auto'
+  this.style.height = this.scrollHeight + 'px'
+})
