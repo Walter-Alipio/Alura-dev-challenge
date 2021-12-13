@@ -87,11 +87,23 @@
     }
 
     .menu__mobile{
-        display: inline-flex;
-        width: 20px;
-        height: 17.5px;
+        display: inline;
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
         color:#FFFFFF;
         cursor: pointer;
+        box-sizing: border-box;
+        
+        
+    }
+    .menu__mobile:hover{
+        background: rgba(80, 129, 251, 0.08);
+        border-radius: 16px;
+    }
+    .menu__mobile:active{
+        background: rgba(80, 129, 251, 0.16);
+        border-radius: 16px;
     }
 }
 
