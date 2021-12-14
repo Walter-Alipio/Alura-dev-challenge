@@ -3,10 +3,20 @@
     const conteudo = document.querySelector('[data-menu="conteudo"]');
     const iconeMenu = document.querySelector('[data-menu="icone"]');
 
+    
 
-    menu.addEventListener('click',()=>{ //atera o icone e abre o menu
+//atera o icone e abre o menu mobile
+    menu.addEventListener('click',()=>{ 
         iconeMenu.classList.toggle('fa-times');
         conteudo.classList.toggle('menu__lateral__mobile-ativo');
-        
     })
+
+//input color alterando a borda do text area
+    const colorSet = document.querySelector('[data-color="inputColor"]');
+    const windowColor = document.querySelector('[data-color="windowColor"]');
+
+    colorSet.addEventListener('input',()=>{
+      windowColor.style.backgroundColor = colorSet.value;
+    })
+
 })()

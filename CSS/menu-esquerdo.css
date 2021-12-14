@@ -45,6 +45,7 @@ margin-bottom: 2rem;
 
 .hide{
     display: none;
+
 }
 .menu__lateral__mobile-ativo{
     width: 15.875rem;
@@ -56,7 +57,9 @@ margin-bottom: 2rem;
     position: absolute;
     padding: 2%;
     box-sizing: border-box;
+    right: 3vw;
 }
+
 
 .botao__menu__mobile{
     height: 140px;
