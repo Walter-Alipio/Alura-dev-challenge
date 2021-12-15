@@ -25,7 +25,6 @@
         menu.classList.toggle('hide');
     })    
 
-
 //input color alterando a borda do text area
     const colorSet = document.querySelector('[data-color="inputColor"]');
     const windowColor = document.querySelector('[data-color="windowColor"]');

@@ -48,14 +48,14 @@
         <nav class="menu__lateral"> 
             <p class="menu__lateral__title">MENU</p>
             <a href="index.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
-            <a href="#" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
+            <a href="comunidades.html" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
         </nav>
 
  <!-- menu esquerdo mobile -->
         <nav class="hide" data-menu="conteudo"> 
             <div class="botao__menu__mobile botao__menu__mobile--secao">
                 <a href="index.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
-                <a href="#" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
+                <a href="comunidades.html" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
             </div>
             <div class="botao__menu__mobile">
                 <button class="button__usuario botao__menu__mobile--usuario"> 
@@ -69,7 +69,19 @@
         <article class="campo__principal">  
             <div class="campo__janela" data-color="windowColor">  
                 <div class="window" data-highlight="window">
-                    <code class="hljs textarea" contenteditable="true" aria-label="Editor de código" data-highlight="areaCode">console.log('Hello world!')</code>               
+                    <code class="hljs textarea" contenteditable="true" aria-label="Editor de código" data-highlight="areaCode">console.log('Hello world!')
+    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+    const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+    }
+                    </code>               
                 </div>        
             </div>
             <button class="botao__visualizar" data-highlight="button">Visualizar com highlight</button>
@@ -92,7 +104,7 @@
                     <input type="color" value="#6BD1FF" class="personalizacao__cores" name="cores" data-color="inputColor">    
                 </div>
             </fieldset>
-            
+
             <button class="botao__salvar">Salvar projeto</button>
         </section>
       

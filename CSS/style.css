@@ -7,7 +7,6 @@ body{
     background-color: #051d3b;
 }
 
-
 .principal{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -40,10 +39,11 @@ body{
     height: 302px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .textarea{
-    width: 100%;
+    width: 98%;
     height: 80%;
     overflow-y: auto;
     display: block;
@@ -60,7 +60,6 @@ body{
 
     white-space: pre-wrap;
 }
-
 
 /* #forca {
     display: block;
@@ -94,13 +93,12 @@ body{
     .principal{
         display: flex;
         flex-direction: column;
-        align-items: center; /*alinha os itens da coluna*/
+        align-items: center; /*alinha os itens da coluna verticalmente*/
         gap: 32px;
     }
 
     .campo__janela, .botao__visualizar{
         width: 704px;
-        
     }
     .textarea, .window{
         width: 640px;
@@ -114,7 +112,6 @@ body{
     .principal, .campo__principal,.campo__janela, .botao__visualizar{
         width: 100%;
     }
-  
     .textarea, .window{
         width: 98%;
     }

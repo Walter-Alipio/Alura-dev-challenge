@@ -3,7 +3,6 @@
     padding:0 32px;
     display: flex;
     flex-direction: column;
-
 }
 .menu__lateral__title{
 font-size: 12px;
@@ -75,10 +74,8 @@ margin-bottom: 2rem;
     border-bottom: 1px solid rgb(255, 255, 255, 8%);
 }
 
-
 @media screen and (max-device-width: 1024px) {
     .menu__lateral{
         display: none;
     }
-   
 }

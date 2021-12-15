@@ -28,17 +28,13 @@
     margin-left: 10px;
 }
 
-.botao__busca--phone{
+.botao__busca--phone, .menu__mobile{
     display: none;
 }
 
 .barra__busca--phone--ativo{
     display: static;
     width: 90%;
-}
-
-.menu__mobile{
-    display: none;
 }
 
 .barra__busca:hover{
@@ -132,7 +128,6 @@
         background-color:  rgba(255, 255, 255, 0.16);
         color: #ffffff;
         border: none;
-        
     }
     
     .botao__busca--phone{
@@ -153,5 +148,3 @@
         border-radius: 16px;
     }
 }
-
-
