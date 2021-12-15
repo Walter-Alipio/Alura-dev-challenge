@@ -43,10 +43,6 @@ margin-bottom: 2rem;
     background-color: #5081FB;
 }
 
-.hide{
-    display: none;
-
-}
 .menu__lateral__mobile-ativo{
     width: 15.875rem;
     height: 100vh;
@@ -57,9 +53,8 @@ margin-bottom: 2rem;
     position: absolute;
     padding: 2%;
     box-sizing: border-box;
-    right: 3vw;
+    right: 2vw;
 }
-
 
 .botao__menu__mobile{
     height: 140px;

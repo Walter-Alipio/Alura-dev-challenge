@@ -1,3 +1,4 @@
+
 .cabecalho{
     display: grid;
     grid-template-columns: 0.75fr 2fr 1fr;
@@ -12,7 +13,7 @@
     display: block;
 }
 
-.barra__busca{
+.barra__busca, .barra__busca--bar {
     width: 752px;
     height: 56px;
     border-radius: 8px;
@@ -27,8 +28,13 @@
     margin-left: 10px;
 }
 
-.barra__busca--phone{
+.botao__busca--phone{
     display: none;
+}
+
+.barra__busca--phone--ativo{
+    display: static;
+    width: 90%;
 }
 
 .menu__mobile{
@@ -94,8 +100,6 @@
         color:#FFFFFF;
         cursor: pointer;
         box-sizing: border-box;
-        
-        
     }
     .menu__mobile:hover{
         background: rgba(80, 129, 251, 0.08);
@@ -107,14 +111,47 @@
     }
 }
 
+.hide{
+    display: none;
+}
+/* smartphone */
 @media screen  and (max-device-width: 767px){
     .barra__busca{
         display: none;
     }
-    .barra__busca--phone{
-        display: inline;
-        width: 1.25rem;
-        height: 1.25rem;
-        color: #fff;
+
+    .barra__busca--bar{
+        display: inline-block;
+        width: 90%;
+        height: 56px;
+        border-radius: 8px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        padding-left: 14px;
+        opacity: 0.64;
+        background-color:  rgba(255, 255, 255, 0.16);
+        color: #ffffff;
+        border: none;
+        
+    }
+    
+    .botao__busca--phone{
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        font-size: 1.3rem;
+        color:#FFFFFF;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    .botao__busca--phone:hover{
+        background: rgba(80, 129, 251, 0.08);
+        border-radius: 16px;
+    }
+    .botao__busca--phone:active{
+        background: rgba(80, 129, 251, 0.16);
+        border-radius: 16px;
     }
 }
+
+
