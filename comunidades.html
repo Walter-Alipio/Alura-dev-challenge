@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.css">
 </head>
 <body>
@@ -64,27 +64,83 @@
         </nav>
 
 <!-- cartões dos projetos -->
-        <article class="cartao__comunidade">
-            <div class="cartao__cor">
-                <div class="cartao__cor--fundo">
-                    <pre><code>
-    
-                    </code></pre>
+        <section class="comunidade">
+            <article class="cartao__comunidade">
+                <div class="cartao__cor">
+                    <div class="cartao__cor--fundo">
+                        <pre class="cartao__pre"><code class="cartao__area-code language-javascript">
+function hellow(){
+console.log("Hellow world!");
+}
+hellow();
+                        </code></pre>
+                    </div>
                 </div>
-            </div>
-            <div class="cartao__conteudo">
-                <h3 class="projeto__titulo">Título do projeto</h3>
-                <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
-                <button class="projeto__comentarios"><i class="fas fa-comment"></i></button>
-                <button class="projetos__curtidas"><i class="fas fa-heart"></i></button>
-                <div class="projeto__usuario"> 
-                    <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                    <p class="login__name">@Harry</p>
+                <div class="cartao__conteudo">
+                    <h3 class="projeto__titulo">Título do projeto</h3>
+                    <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
+                    <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
+                    <button class="botao__curtidas"><i class="fas fa-heart"></i>  9</button>
+                    <div class="projeto__usuario"> 
+                        <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                        <p class="login__name">@Harry</p>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
+            <article class="cartao__comunidade">
+                <div class="cartao__cor" style="background-color:#5F75E2;">
+                    <div class="cartao__cor--fundo">
+                        <pre class="cartao__pre"><code class="cartao__area-code language-html">&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cartao__conteudo">
+                    <h3 class="projeto__titulo">Título do projeto</h3>
+                    <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
+                    <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
+                    <button class="botao__curtidas"><i class="fas fa-heart"></i>  9</button>
+                    <div class="projeto__usuario"> 
+                        <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                        <p class="login__name">@Harry</p>
+                    </div>
+                </div>
+            </article>
+            <article class="cartao__comunidade">
+                <div class="cartao__cor" style="background-color:#FF6BCD;">
+                    <div class="cartao__cor--fundo">
+                        <pre class="cartao__pre"><code class="cartao__area-code language-css">body{
+                            padding:0;
+box-sizing:border-box;
+}
+.container{
+font-size:16px;
+font-family: "Roboto Mono";
+                        }
+
+                        </code></pre>
+                    </div>
+                </div>
+                <div class="cartao__conteudo">
+                    <h3 class="projeto__titulo">Título do projeto</h3>
+                    <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
+                    <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
+                    <button class="botao__curtidas"><i class="fas fa-heart"></i>  9</button>
+                    <div class="projeto__usuario"> 
+                        <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                        <p class="login__name">@Harry</p>
+                    </div>
+                </div>
+            </article>
+        </section>
 
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="JS/index.js"></script>
 </body>
 </html>

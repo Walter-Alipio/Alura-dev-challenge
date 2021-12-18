@@ -1,4 +1,25 @@
-
+.comunidade{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*alinha os itens da coluna verticalmente*/
+    gap: 32px;
+}
+@media screen and (min-width:1024px){
+    .comunidade{
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 15px;
+        
+    }
+    .cartao__comunidade{
+        align-items: center;
+        justify-content: center;
+        max-width: 520px;
+        max-height: 464px;
+    }
+}
 .cartao__comunidade{
     width: 90vw;
     height: 36.125em;
@@ -6,14 +27,21 @@
     background: rgba(0, 0, 0, 0.16);
     border-radius: 8px;
 }
+
 .cartao__cor{
     width: 100%;
     height: 25.125em;
-    background: #5F75E2;
-    border-radius: 8px;    border-radius: 8px;
+    background: #6BD1FF;
+    border-radius: 8px;  
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width:1024px){
+    .cartao__cor{
+        max-height: 288px;
+    }
 }
 .cartao__cor--fundo{
     width: 85%;
@@ -26,6 +54,31 @@
     background-attachment: local;
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+@media screen and (min-width:768px){
+    .cartao__cor--fundo{
+        width: 90%;
+    }
+}
+.cartao__pre{
+    width: 100%;
+    height: 90%;
+    background: none;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    
+}
+.cartao__area-code{
+    width: 100%;
+    height: 90%;
+    font-family: Roboto Mono;
+    background-color: #141414;
+    box-sizing: border-box;
+    
+ 
 }
 .cartao__conteudo{
     width: 100%;
@@ -35,6 +88,12 @@
     padding: 20px;
     box-sizing: border-box;
 }
+@media screen and (min-width:1024px){
+    .cartao__conteudo{
+        margin-top: 8%;
+    }
+}
+
 .projeto__titulo{
     font-size: 21px;
     font-weight: 700;
@@ -44,12 +103,22 @@
     font-size: 16px;
     grid-column: span 4;
 }
-.projetos__curtidas:active{
-    color:red;
+.botao__comentarios, .botao__curtidas{
+    font-size: 16px;
+    line-height: 24px;
+    width: 58px;
+    height: 40px;
+    align-self: center;
+    justify-content: flex-end;
 }
+.botao__comentarios:hover,.botao__curtidas:hover{
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+} 
 
-.projeto__usuario{
+.projeto__usuario{  
     grid-column: span 2;
     display: flex;
-    align-items: center;
+    align-self: center;
+    justify-content: flex-end;
 }

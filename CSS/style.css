@@ -9,7 +9,7 @@ body{
 
 .principal{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: auto 2fr 1fr;
 }
 
 .campo__principal{
@@ -86,7 +86,7 @@ body{
     background: rgba(80, 129, 251, 0.24);
 }
 
-@media screen and (max-device-width: 1024px){
+@media screen and (max-device-width: 1023px){
     body{
         padding: 0 32px;
     }
@@ -108,6 +108,7 @@ body{
 @media screen and (max-device-width: 767px ){
     body{
         padding: 20px;
+        box-sizing: border-box;
     }
     .principal, .campo__principal,.campo__janela, .botao__visualizar{
         width: 100%;

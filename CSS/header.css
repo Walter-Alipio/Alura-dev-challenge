@@ -69,7 +69,7 @@
     margin-left: 8px;
 }
 
-@media screen and (max-device-width: 1024px ){
+@media screen and (max-device-width: 1023px ){
     .cabecalho{
         width: 87vw;
         display: flex;
