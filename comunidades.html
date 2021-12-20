@@ -69,21 +69,35 @@
                 <div class="cartao__cor">
                     <div class="cartao__cor--fundo">
                         <pre class="cartao__pre"><code class="cartao__area-code language-javascript">
-function hellow(){
-console.log("Hellow world!");
+function hello(){
+console.log("Hello world!");
 }
-hellow();
+hello();
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+    const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+    }
                         </code></pre>
                     </div>
                 </div>
                 <div class="cartao__conteudo">
                     <h3 class="projeto__titulo">Título do projeto</h3>
                     <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
-                    <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
-                    <button class="botao__curtidas"><i class="fas fa-heart"></i>  9</button>
+                    <button class="botao__comentarios"><i class="fas fa-comment"></i>9</button>
+                    <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i>
+                        <span data-botao="contador">9</span></button>
                     <div class="projeto__usuario"> 
-                        <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                        <p class="login__name">@Harry</p>
+                        <button class="projeto__usuario-botao">                           
+                            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                            <p class="login__name">@Harry</p>
+                        </button>
                     </div>
                 </div>
             </article>
@@ -103,10 +117,13 @@ hellow();
                     <h3 class="projeto__titulo">Título do projeto</h3>
                     <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
                     <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
-                    <button class="botao__curtidas"><i class="fas fa-heart"></i>  9</button>
+                    <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i>
+                        <span data-botao="contador">9</span></button>
                     <div class="projeto__usuario"> 
-                        <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                        <p class="login__name">@Harry</p>
+                        <button class="projeto__usuario-botao">                           
+                            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                            <p class="login__name">@Harry</p>
+                        </button>
                     </div>
                 </div>
             </article>
@@ -114,7 +131,7 @@ hellow();
                 <div class="cartao__cor" style="background-color:#FF6BCD;">
                     <div class="cartao__cor--fundo">
                         <pre class="cartao__pre"><code class="cartao__area-code language-css">body{
-                            padding:0;
+padding:0;
 box-sizing:border-box;
 }
 .container{
@@ -129,10 +146,13 @@ font-family: "Roboto Mono";
                     <h3 class="projeto__titulo">Título do projeto</h3>
                     <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
                     <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
-                    <button class="botao__curtidas"><i class="fas fa-heart"></i>  9</button>
+                    <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i>
+                        <span data-botao="contador">9</span></button>
                     <div class="projeto__usuario"> 
-                        <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                        <p class="login__name">@Harry</p>
+                        <button class="projeto__usuario-botao">                           
+                            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                            <p class="login__name">@Harry</p>
+                        </button>
                     </div>
                 </div>
             </article>
@@ -141,6 +161,7 @@ font-family: "Roboto Mono";
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <script src="JS/index.js"></script>
+    <script src="JS/menuMobile.js"></script>
+    <script src="JS/comunidades.js"></script>
 </body>
 </html>

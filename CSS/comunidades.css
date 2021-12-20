@@ -67,7 +67,7 @@
     width: 100%;
     height: 90%;
     background: none;
-    border-radius: 8px;
+    border-radius: 7px;
     white-space: pre-wrap;
     
 }
@@ -85,7 +85,7 @@
     height: 30%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 20px;
+    padding: 19px;
     box-sizing: border-box;
 }
 @media screen and (min-width:1024px){
@@ -111,6 +111,13 @@
     align-self: center;
     justify-content: flex-end;
 }
+.botao__comentarios i, .botao__curtidas i {
+    margin-right: 0.5rem;
+}
+
+.botao__curtidas--like{
+    color:#F65151;
+}
 .botao__comentarios:hover,.botao__curtidas:hover{
     background: rgba(255, 255, 255, 0.08);
     border-radius: 16px;
@@ -121,4 +128,17 @@
     display: flex;
     align-self: center;
     justify-content: flex-end;
+}
+
+.projeto__usuario-botao{
+    width: 106px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.projeto__usuario-botao:hover{
+    width: 106px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
 }
