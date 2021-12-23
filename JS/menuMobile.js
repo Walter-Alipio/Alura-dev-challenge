@@ -10,7 +10,6 @@
     })
     
     //altera o icone e abre campo de busca mobile
-    
     const searchBar = document.querySelector('[data-buscaMobile="bar"]');
     const searchButton = document.querySelector('[data-buscaMobile="button"]')
     const searchIcon = document.querySelector('[data-buscaMobile="icone"]');

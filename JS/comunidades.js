@@ -1,32 +1,21 @@
 (() =>{
     const likeButton = document.querySelectorAll('[data-botao="curtidas"]');
-   
-    for(let i=0; i<likeButton.length;i++){
-        likeButton[i].addEventListener('click',()=>{
-            const likeButtonHeart = document.querySelectorAll('[data-botao="coracao"]');
-            let counter = document.querySelectorAll('[data-botao="contador"]');
-            let aux = parseInt(counter[i].textContent);
-            
+  
+    likeButton.forEach(function(button){
+        button.addEventListener('click',()=>{
+          const heart = button.firstChild;
+          let count = parseInt(button.lastChild.textContent);
+            heart.classList.toggle('botao__curtidas--like');
 
-            likeButtonHeart[i].classList.toggle('botao__curtidas--like');
-
-            const LikeHeartClass = likeButtonHeart[i].classList;
-            console.log(LikeHeartClass);
-    
-            for(let j=0; j < LikeHeartClass.length; j++){
-                if(LikeHeartClass[j] == 'botao__curtidas--like'){
-                    aux+=1;
-                    counter[i].textContent = aux; 
-                    console.log("curti",counter[i].textContent)
-                    return ;
-                }
+            if(heart.classList.length >2){
+                count++;
+                button.lastChild.textContent = count;
+            }else{
+                count--;
+                button.lastChild.textContent = count;
             }
-            
-            aux-=1;
-            counter[i].textContent = aux; 
-            
-            console.log("não curti",counter[i].textContent);
-            
+            console.log(count)
+            console.log(heart.classList);
         })
-    }
+    })
 })()
