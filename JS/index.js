@@ -11,7 +11,6 @@
 //visualizar highlight
     const linguagem = document.querySelector('[data-highlight="linguagem"]');
     const buttonHighlight = document.querySelector('[data-highlight="button"]');
-
     const setHighlight = ()=>{
         const codeArea = document.querySelector('[data-highlight="areaCode"]');
         const classList = codeArea.classList;
@@ -26,5 +25,4 @@
     buttonHighlight.addEventListener('click',()=>{
        setHighlight();
     })
-
 })()
