@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Dev</title>
 
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/dracula.css">
-   
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/menu-esquerdo.css">
-    <link rel="stylesheet" href="CSS/menu-direita.css">
+    <link rel="stylesheet"type="text/css" href="CSS/base/reset.css">
+    <link rel="stylesheet"type="text/css" href="CSS/dracula.css">
+
+    <link rel="stylesheet"type="text/css" href="CSS/base/base.css">
+    <link rel="stylesheet"type="text/css" href="CSS/campoPrincipal.css">
+    <link rel="stylesheet"type="text/css" href="CSS/header.css">
+    <link rel="stylesheet"type="text/css" href="CSS/usuario.css">
+    <link rel="stylesheet"type="text/css" href="CSS/menu.css">
+    <link rel="stylesheet"type="text/css" href="CSS/form.css">
+    <link rel="stylesheet"type="text/css" href="CSS/input.css">
     
    
 
@@ -22,7 +25,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.css">
+
 </head>
 <body>
     <header class="cabecalho">
@@ -30,84 +35,72 @@
         <input type="search" class="barra__busca" placeholder="Busque por aqui">
         <button class="button__usuario"> 
             <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-            <p class="login__name">Harry</p>
+            <p>Harry</p>
         </button>
 <!-- hearder mobile -->
         <input type="search" class="barra__busca hide" data-buscaMobile="bar" placeholder="Busque por aqui">
         <div class="botoes__mobile">
-            
             <button class="botao__busca--phone" data-buscaMobile="button"><i class="fas fa-search" data-buscaMobile="icone"></i></button>
 
             <button class="menu__mobile" data-menu="ativar"><i class="fas fa-bars" data-menu="icone"></i></button> <!--tablet version-->
         </div>
     </header>
-
-    <main class="principal">
-
- <!-- menu lateral esquerdo -->      
-        <nav class="menu__lateral"> 
-            <p class="menu__lateral__title">MENU</p>
-            <a href="index.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
-            <a href="comunidades.html" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
+    <main class="main">
+    <!-- menu -->      
+        <nav class="menu" data-menu="conteudo"> 
+                   <p class="titulo menu__title">MENU</p>
+                   <a href="index.html" class="menu__link menu__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
+                   <a href="comunidades.html" class="menu__link"><i class="fas fa-users"></i> Comunidade</a>
+       
+                   <button class="button__usuario botao__menu__mobile--usuario hide" data-menu="usuario"> 
+                       <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                       <p class="login__name">Harry</p>
+                   </button>
         </nav>
-
- <!-- menu esquerdo mobile -->
-        <nav class="hide" data-menu="conteudo"> 
-            <div class="botao__menu__mobile botao__menu__mobile--secao">
-                <a href="index.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-code"></i> Editor de código</a>
-                <a href="comunidades.html" class="menu__lateral__link"><i class="fas fa-users"></i> Comunidade</a>
-            </div>
-            <div class="botao__menu__mobile">
-                <button class="button__usuario botao__menu__mobile--usuario"> 
-                    <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                    <p class="login__name">Harry</p>
-                </button>
-            </div>
-        </nav>
-
- <!-- area de texto ao centro da página -->
+       
+    <!-- area de texto e highlight-->
         <article class="campo__principal">  
-            <div class="campo__janela" data-color="windowColor">  
-                <div class="window" data-highlight="window">
-                    <code class="hljs textarea" contenteditable="true" aria-label="Editor de código" data-highlight="areaCode">console.log('Hello world!')
-    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-    const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-        const res = f(seed)
-        return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-    }
-                    </code>               
-                </div>        
-            </div>
-            <button class="botao__visualizar" data-highlight="button">Visualizar com highlight</button>
+                   <div class="campo__janela" data-color="windowColor">  
+                       <div class="window" data-highlight="window">
+                           <code class="hljs textarea" contenteditable="true" aria-label="Editor de código" data-highlight="areaCode">console.log('Hello world!')
+           const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+       
+           const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+       
+           const unfold = (f, seed) => {
+           const go = (f, seed, acc) => {
+               const res = f(seed)
+               return res ? go(f, res[1], acc.concat([res[0]])) : acc
+           }
+           return go(f, seed, [])
+           }
+                           </code>               
+                       </div>        
+                   </div>
+                   <button class="botao__visualizar" data-highlight="button">Visualizar com highlight</button>
         </article>
-
- <!-- menu da lateral direita da página -->
-        <section action="#" class="meu__projeto"> 
-            <p class="meu__projeto__title">Seu projeto</p>
-            <input type="text" name="nome do projeto" placeholder="Nome do seu projeto" class="meu__projeto__box" id="">
-            <textarea name="descricao" id="" cols="30" rows="10" class="meu__projeto__box meu__projeto__descricao" placeholder="Descrição do seu projeto"></textarea>
-          
-            <fieldset class=" personalizacao">
-                <p class="meu__projeto__title">Personalizacao</p>
-                <div class="personalizacao--tablet">
-                    <select class="personalizacao__linguagem meu__projeto__box" name="linguagem" data-highlight="linguagem">
-                        <option class="option" value="javascript">JavaScript</option>
-                        <option class="option" value="html">HTML</option>
-                        <option class="option" value="css">CSS</option>
-                    </select>
-                    <input type="color" value="#6BD1FF" class="personalizacao__cores" name="cores" data-color="inputColor">    
-                </div>
-            </fieldset>
-
-            <button class="botao__salvar">Salvar projeto</button>
-        </section>
-      
+       
+    <!-- formulário -->
+        <form class="form">
+                   <section class="meu__projeto"> 
+                       <p class="titulo meu__projeto__title">Seu projeto</p>
+                       <input type="text" name="nome do projeto" placeholder="Nome do seu projeto" class="input" data-nomeDoProjeto>
+                       <textarea name="descricao" id="" cols="30" rows="10" class="input input-description" placeholder="Descrição do seu projeto" data-descricao></textarea>
+                   </section>
+                   
+                   <section class=" personalizacao">
+                       <p class="titulo meu__projeto__title">Personalizacao</p>
+                       <div class="personalizacao--tablet">
+                           <select class="personalizacao__linguagem input input-personalizacao" name="linguagem" data-highlight="linguagem">
+                               <option class="option" value="javascript">JavaScript</option>
+                               <option class="option" value="html">HTML</option>
+                               <option class="option" value="css">CSS</option>
+                           </select>
+                           <input type="color" value="#6BD1FF" class="personalizacao__cores" name="cores" data-color="inputColor">    
+                       </div>
+                       <button class="botao__salvar" data-salvar>Salvar projeto</button>
+                   </section>
+        </form>       
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script src="JS/menuMobile.js"></script>

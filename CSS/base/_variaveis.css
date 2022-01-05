@@ -1,0 +1,24 @@
+:root{
+    --azul-escuro: #051D3B;
+    --azul-normal: #5081FB;
+    --azul-hover-ative: #7BA4FC;
+    --azul-focus: #96B9FD;
+    --branco: #ffff;
+
+    --input:rgba(255, 255, 255, 0.16);
+    --input-hover: rgba(255, 255, 255, 0.24);
+    
+    --fonte-corpo: 'Inter', sans-serif;
+    --fonte-janela: 'Montserrat', sans-serif;
+
+    --fonte-peso-titulo: 700;
+    --fonte-peso-corpo: 400;
+
+    --fonte-titulo-size: 1.3125rem;
+    --fonte-body-size: 1rem;
+    --fonte-sidebar: 0.75rem;
+
+    --tituloLineheight: 2rem;
+    --bodyLineheight: 1.5rem;
+    --sidebarLineheight: 1.125rem;
+}

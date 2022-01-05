@@ -1,31 +1,27 @@
-
 .cabecalho{
+    min-width: 50px;
+    min-height: 50px;    
     display: grid;
-    grid-template-columns: 0.75fr 2fr 1fr;
-    height: 56px;
-    margin: 32px 0;
+    grid-template-columns: 0.75fr 2fr 0.75fr;
+    gap: 25px;
+    padding: 16px;
+    align-items: center;
 }
 
 .logo__alura{
-    width: 145px;
-    margin-left: 32px;
-    align-self: center;
-    display: block;
+    width: 9.0625rem;
 }
 
-.barra__busca, .barra__busca--bar {
-    width: 752px;
-    height: 56px;
+.barra__busca {
+    height: 3.5rem;
     border-radius: 8px;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    padding-left: 14px;
     opacity: 0.64;
-    color: #ffffff;
     border: none;
-    background-color:  rgba(255, 255, 255, 0.16);
-    align-content: flex-start;
-    margin-left: 10px;
+    background-color:  var(--input);
+    padding-left: 0.875rem;
+}
+.barra__busca:hover{
+    background-color:  var(--input-hover);
 }
 
 .botao__busca--phone, .menu__mobile{
@@ -37,79 +33,56 @@
     width: 90%;
 }
 
-.barra__busca:hover{
-    background-color:  rgba(255, 255, 255, 0.24);
-}
-
 .button__usuario{
-    width: 106px;
-    background-color: #051d3b;
+    width: 6.625rem;
     border: none;
     border-radius: 8px;
-    padding: 12px;
     display: flex;
-    margin-right: 32px;
+    justify-content: space-around;
+    align-items: center;
     justify-self: flex-end;
 }
 .button__usuario:hover{
     background: rgba(255, 255, 255, 0.08);
     cursor: pointer;
 }
-
-.foto__perfil{
-    width: 32px;
-    height: 32px;
-}
-
-.login__name{
-    color: #ffffff;  
-    font-size: 16px;
-    line-height: 24px;
-    font-family: 'Inter';
-    margin-left: 8px;
+.botoes__mobile{
+    display: none;
 }
 
 @media screen and (max-device-width: 1023px ){
     .cabecalho{
-        width: 87vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .logo__alura{
-        margin: 0;
+    .botoes__mobile{
+        display: inline;
     }
 
     .button__usuario{
         display: none;
     }
     .barra__busca{
-        width: 26.9375em;
-        margin: 0;
+       width: 26.9375em;
     }
 
     .menu__mobile{
         display: inline;
-        width: 48px;
-        height: 48px;
+        width: 3rem;
+        height: 3rem;
         font-size: 1.3rem;
-        color:#FFFFFF;
         cursor: pointer;
-        box-sizing: border-box;
+        border-radius: 16px;
     }
     .menu__mobile:hover{
         background: rgba(80, 129, 251, 0.08);
-        border-radius: 16px;
     }
     .menu__mobile:active{
         background: rgba(80, 129, 251, 0.16);
-        border-radius: 16px;
     }
 }
 
-.hide{
-    display: none;
-}
 /* smartphone */
 @media screen  and (max-device-width: 767px){
     .barra__busca{
@@ -119,32 +92,19 @@
     .barra__busca--bar{
         display: inline-block;
         width: 90%;
-        height: 56px;
-        border-radius: 8px;
-        font-family: 'Inter', sans-serif;
-        font-size: 16px;
-        padding-left: 14px;
-        opacity: 0.64;
-        background-color:  rgba(255, 255, 255, 0.16);
-        color: #ffffff;
-        border: none;
     }
     
     .botao__busca--phone{
         display: inline-block;
-        width: 48px;
-        height: 48px;
-        font-size: 1.3rem;
-        color:#FFFFFF;
+        width: 3rem;
+        height: 3rem;
         cursor: pointer;
-        box-sizing: border-box;
+        border-radius: 16px;
     }
     .botao__busca--phone:hover{
         background: rgba(80, 129, 251, 0.08);
-        border-radius: 16px;
     }
     .botao__busca--phone:active{
         background: rgba(80, 129, 251, 0.16);
-        border-radius: 16px;
     }
 }

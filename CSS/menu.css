@@ -1,48 +1,39 @@
-.menu__lateral{
-    height: 100vh;
-    padding:0 32px;
+.menu{
     display: flex;
     flex-direction: column;
 }
-.menu__lateral__title{
-font-size: 12px;
-line-height: 18px;
+.menu__title{
 letter-spacing: 0.4em;
 text-transform: uppercase;
-color: #FFFFFF;
-align-self: flex-start;
 margin-bottom: 2rem;
 }
 
-.menu__lateral__link{
-    font-size: 16px;
-    line-height: 24px;
-    color: #FFFFFF;
-    margin-bottom: 0.75rem;
+.menu__link{
+    margin-bottom: 1rem;
     opacity: 56%;
 }
-.menu__lateral__link:hover{
+.menu__link:hover{
     opacity: 72%;
 }
-.menu__lateral__link--ativo{
+.menu__link--ativo{
     opacity: 100%;
 }
-.menu__lateral__link i{
+.menu__link i{
     background: #5081FB29;
     padding: 1rem 0.8rem;
     border-radius: 16px;
     margin-right: 1rem;
     
 }
-.menu__lateral__link i:hover{
+.menu__link i:hover{
     background: #5081FBA3;
 }
 
-.menu__lateral__link--ativo i{
-    background-color: #5081FB;
+.menu__link--ativo i{
+    background-color: var(--azul-normal);
 }
 
-.menu__lateral__mobile-ativo{
+.menu__mobile-ativo{
     width: 15.875rem;
     height: 100vh;
     background: #2D415B;
@@ -50,9 +41,10 @@ margin-bottom: 2rem;
     display: flex;
     flex-direction: column;  
     position: absolute;
-    padding: 2%;
+    padding: 5%;
     box-sizing: border-box;
     right: 2vw;
+    top: 85px;
 }
 
 .botao__menu__mobile{
@@ -65,17 +57,18 @@ margin-bottom: 2rem;
 
 .botao__menu__mobile--usuario{
     display: flex;
-    margin:0;
     align-self: flex-start;
-    background: #2D415B;
 }
 
 .botao__menu__mobile--secao{
     border-bottom: 1px solid rgb(255, 255, 255, 8%);
 }
+.hide{
+    display: none;
+}
 
 @media screen and (max-device-width: 1024px) {
-    .menu__lateral{
+    .menu{
         display: none;
     }
 }

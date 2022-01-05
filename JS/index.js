@@ -8,6 +8,13 @@
       windowColor.style.backgroundColor = colorSet.value;
     })
 
+//botao salvar
+    const saveButton = document.querySelector('[data-salvar]');
+
+    saveButton.addEventListener('click',()=>{
+        console.log('Fui clicado');
+    })
+
 //visualizar highlight
     const linguagem = document.querySelector('[data-highlight="linguagem"]');
     const buttonHighlight = document.querySelector('[data-highlight="button"]');

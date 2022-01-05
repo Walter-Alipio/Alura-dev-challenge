@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidades</title>
 
-    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/base/reset.css">
     <link rel="stylesheet" href="CSS/dracula.css">
    
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/base/base.css">
     <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/menu-esquerdo.css">
+    <link rel="stylesheet" href="CSS/menu.css">
     <link rel="stylesheet" href="CSS/comunidades.css">
+    <link rel="stylesheet" href="CSS/usuario.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,47 +29,37 @@
         <input type="search" class="barra__busca" placeholder="Busque por aqui">
         <button class="button__usuario"> 
             <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-            <p class="login__name">Harry</p>
+            <p>Harry</p>
         </button>
 <!-- hearder mobile -->
         <input type="search" class="barra__busca hide" data-buscaMobile="bar" placeholder="Busque por aqui">
         <div class="botoes__mobile">
-            
             <button class="botao__busca--phone" data-buscaMobile="button"><i class="fas fa-search" data-buscaMobile="icone"></i></button>
 
             <button class="menu__mobile" data-menu="ativar"><i class="fas fa-bars" data-menu="icone"></i></button> <!--tablet version-->
         </div>
     </header>
 
-    <main class="principal">
+    <main class="main">
 
-    <!-- menu lateral esquerdo -->      
-        <nav class="menu__lateral"> 
-            <p class="menu__lateral__title">MENU</p>
-            <a href="index.html" class="menu__lateral__link "><i class="fas fa-code"></i> Editor de código</a>
-            <a href="comunidades.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-users"></i> Comunidade</a>
-        </nav>
+    <!-- menu -->      
+    <nav class="menu" data-menu="conteudo"> 
+        <p class="titulo menu__title">MENU</p>
+        <a href="index.html" class="menu__link "><i class="fas fa-code"></i> Editor de código</a>
+        <a href="comunidades.html" class="menu__link menu__link--ativo"><i class="fas fa-users"></i> Comunidade</a>
 
-    <!-- menu esquerdo mobile -->
-        <nav class="hide" data-menu="conteudo"> 
-            <div class="botao__menu__mobile botao__menu__mobile--secao">
-                <a href="index.html" class="menu__lateral__link "><i class="fas fa-code"></i> Editor de código</a>
-                <a href="comunidades.html" class="menu__lateral__link menu__lateral__link--ativo"><i class="fas fa-users"></i> Comunidade</a>
-            </div>
-            <div class="botao__menu__mobile">
-                <button class="button__usuario botao__menu__mobile--usuario"> 
-                    <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                    <p class="login__name">Harry</p>
-                </button>
-            </div>
-        </nav>
+        <button class="button__usuario botao__menu__mobile--usuario hide" data-menu="usuario"> 
+            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+            <p class="login__name">Harry</p>
+        </button>
+    </nav>
 
 <!-- cartões dos projetos -->
-        <section class="comunidade">
-            <article class="cartao__comunidade">
-                <div class="cartao__cor">
-                    <div class="cartao__cor--fundo">
-                        <pre class="cartao__pre"><code class="cartao__area-code language-javascript">
+    <section class="comunidade">
+        <article class="cartao__comunidade">
+            <div class="cartao__cor">
+                <div class="cartao__cor--fundo">
+                    <pre class="cartao__pre"><code class="cartao__area-code language-javascript">
 function hello(){
 console.log("Hello world!");
 }
@@ -101,61 +92,41 @@ const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key]
                 </div>
             </article>
             <article class="cartao__comunidade">
-                <div class="cartao__cor" style="background-color:#5F75E2;">
+                <div class="cartao__cor">
                     <div class="cartao__cor--fundo">
-                        <pre class="cartao__pre"><code class="cartao__area-code language-html">&lt;html&gt;
-&lt;head&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Hello World!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-                        </code></pre>
+                        <pre class="cartao__pre"><code class="cartao__area-code language-javascript">
+    function hello(){
+    console.log("Hello world!");
+    }
+    hello();
+    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+    
+        const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+    
+        const unfold = (f, seed) => {
+        const go = (f, seed, acc) => {
+            const res = f(seed)
+            return res ? go(f, res[1], acc.concat([res[0]])) : acc
+        }
+        return go(f, seed, [])
+        }
+                            </code></pre>
+                        </div>
                     </div>
-                </div>
-                <div class="cartao__conteudo">
-                    <h3 class="projeto__titulo">Título do projeto</h3>
-                    <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
-                    <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
-                    <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i>
-                        <span data-botao="contador">9</span></button>
-                    <div class="projeto__usuario"> 
-                        <button class="projeto__usuario-botao">                           
-                            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                            <p class="login__name">@Harry</p>
-                        </button>
+                    <div class="cartao__conteudo">
+                        <h3 class="projeto__titulo">Título do projeto</h3>
+                        <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
+                        <button class="botao__comentarios"><i class="fas fa-comment"></i>9</button>
+                        <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i><span data-botao="contador">9</span></button>
+                        <div class="projeto__usuario"> 
+                            <button class="projeto__usuario-botao">                           
+                                <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
+                                <p class="login__name">@Harry</p>
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article class="cartao__comunidade">
-                <div class="cartao__cor" style="background-color:#FF6BCD;">
-                    <div class="cartao__cor--fundo">
-                        <pre class="cartao__pre"><code class="cartao__area-code language-css">body{
-padding:0;
-box-sizing:border-box;
-}
-.container{
-font-size:16px;
-font-family: "Roboto Mono";
-                        }
-
-                        </code></pre>
-                    </div>
-                </div>
-                <div class="cartao__conteudo">
-                    <h3 class="projeto__titulo">Título do projeto</h3>
-                    <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
-                    <button class="botao__comentarios"><i class="fas fa-comment"></i>  9</button>
-                    <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i>
-                        <span data-botao="contador">9</span></button>
-                    <div class="projeto__usuario"> 
-                        <button class="projeto__usuario-botao">                           
-                            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                            <p class="login__name">@Harry</p>
-                        </button>
-                    </div>
-                </div>
-            </article>
-        </section>
+                </article>
+    </section>
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
