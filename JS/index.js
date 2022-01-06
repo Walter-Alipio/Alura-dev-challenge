@@ -1,4 +1,4 @@
-(()=>{  //encapsulando o código js
+import { saveProject } from "./components/saveProject.js";
   
 //input color alterando a borda do text area
     const colorSet = document.querySelector('[data-color="inputColor"]');
@@ -6,13 +6,6 @@
 
     colorSet.addEventListener('input',()=>{
       windowColor.style.backgroundColor = colorSet.value;
-    })
-
-//botao salvar
-    const saveButton = document.querySelector('[data-salvar]');
-
-    saveButton.addEventListener('click',()=>{
-        console.log('Fui clicado');
     })
 
 //visualizar highlight
@@ -32,4 +25,7 @@
     buttonHighlight.addEventListener('click',()=>{
        setHighlight();
     })
-})()
+
+    //botao salvar
+    const saveButton = document.querySelector('[data-salvar]');
+    saveButton.addEventListener('click',saveProject)  

@@ -29,6 +29,7 @@
 }
 
 .textarea{
+    width: 41rem;
     height: 80%;
     overflow-y:hidden;
     display: block;

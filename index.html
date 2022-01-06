@@ -84,8 +84,8 @@
         <form class="form">
                    <section class="meu__projeto"> 
                        <p class="titulo meu__projeto__title">Seu projeto</p>
-                       <input type="text" name="nome do projeto" placeholder="Nome do seu projeto" class="input" data-nomeDoProjeto>
-                       <textarea name="descricao" id="" cols="30" rows="10" class="input input-description" placeholder="Descrição do seu projeto" data-descricao></textarea>
+                       <input type="text" name="nome do projeto" maxlength="40" placeholder="Nome do seu projeto" class="input" data-nomeDoProjeto required>
+                       <textarea name="descricao" id="" cols="1" rows="2" maxlength="140" class="input input-description" placeholder="Descrição do seu projeto" data-descricao required wrap="hard"></textarea>
                    </section>
                    
                    <section class=" personalizacao">
@@ -104,6 +104,6 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script src="JS/menuMobile.js"></script>
-    <script src="JS/index.js"></script>
+    <script type="module" src="JS/index.js"></script>
 </body>
 </html>
