@@ -1,4 +1,18 @@
+import { menuMobile } from "./menuMobile.js";
+import { CommunityPage } from "./paginaComunidade.js";
+
+menuMobile();
 (() =>{
+    // const community = document.querySelector('[data-comunidades]');
+    // const sectionButtons = document.querySelector('[data-cartao-botoes]')
+    // community.addEventListener('mouseenter', () => {
+    //     sectionButtons.classList.remove('hide')
+    // })
+    // community.addEventListener('mouseleave', () => {
+    //     sectionButtons.classList.add('hide')
+    // })
+  
+    CommunityPage();
     const likeButton = document.querySelectorAll('[data-botao="curtidas"]');
     likeButton.forEach(function(button){
         button.addEventListener('click',()=>{

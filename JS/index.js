@@ -1,5 +1,7 @@
 import { saveProject } from "./components/saveProject.js";
-  
+import { menuMobile } from "./menuMobile.js";
+
+menuMobile();
 //input color alterando a borda do text area
     const colorSet = document.querySelector('[data-color="inputColor"]');
     const windowColor = document.querySelector('[data-color="windowColor"]');

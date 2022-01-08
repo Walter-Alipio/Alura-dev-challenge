@@ -1,4 +1,4 @@
-(()=>{
+export const menuMobile = ()=>{
     //atera o icone e abre o menu mobile
     const menu = document.querySelector('[data-menu="ativar"]');
     const conteudo = document.querySelector('[data-menu="conteudo"]');
@@ -25,4 +25,4 @@
         logoAlura.classList.toggle('hide');
         menu.classList.toggle('hide');
     })    
-})()
+}

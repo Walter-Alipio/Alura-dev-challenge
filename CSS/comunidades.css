@@ -9,6 +9,10 @@
     height: 25rem;
     background: rgba(0, 0, 0, 0.16);
     border-radius: 8px;
+    transition: all .4s;
+}
+.cartao__comunidade:hover{
+    height: 27rem;
 }
 @media  screen and (max-width: 767px) {
     .cartao__comunidade{
@@ -71,6 +75,18 @@
     padding: 19px;
     box-sizing: border-box;
 }
+.cartao__conteudo-botoes{
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    width: 100%;
+    opacity: 0;
+    transition: .8s;
+}
+.cartao__conteudo-botoes:hover{
+    opacity: 100;
+}
 
 
 .projeto__titulo{
@@ -120,4 +136,8 @@
     height: 56px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 8px;
+}
+.hide{
+    display: none;
+    transition: all .4s;
 }

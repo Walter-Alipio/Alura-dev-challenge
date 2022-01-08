@@ -55,83 +55,14 @@
     </nav>
 
 <!-- cartões dos projetos -->
-    <section class="comunidade">
-        <article class="cartao__comunidade">
-            <div class="cartao__cor">
-                <div class="cartao__cor--fundo">
-                    <pre class="cartao__pre"><code class="cartao__area-code language-javascript">
-function hello(){
-console.log("Hello world!");
-}
-hello();
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-    const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-        const res = f(seed)
-        return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-    }
-                        </code></pre>
-                    </div>
-                </div>
-                <div class="cartao__conteudo">
-                    <h3 class="projeto__titulo">Título do projeto</h3>
-                    <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
-                    <button class="botao__comentarios"><i class="fas fa-comment"></i>9</button>
-                    <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i><span data-botao="contador">9</span></button>
-                    <div class="projeto__usuario"> 
-                        <button class="projeto__usuario-botao">                           
-                            <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                            <p class="login__name">@Harry</p>
-                        </button>
-                    </div>
-                </div>
-            </article>
-            <article class="cartao__comunidade">
-                <div class="cartao__cor">
-                    <div class="cartao__cor--fundo">
-                        <pre class="cartao__pre"><code class="cartao__area-code language-javascript">
-    function hello(){
-    console.log("Hello world!");
-    }
-    hello();
-    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-    
-        const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-    
-        const unfold = (f, seed) => {
-        const go = (f, seed, acc) => {
-            const res = f(seed)
-            return res ? go(f, res[1], acc.concat([res[0]])) : acc
-        }
-        return go(f, seed, [])
-        }
-                            </code></pre>
-                        </div>
-                    </div>
-                    <div class="cartao__conteudo">
-                        <h3 class="projeto__titulo">Título do projeto</h3>
-                        <p class="projeto__descricao">Essa a descrição do meu projeto.</p>
-                        <button class="botao__comentarios"><i class="fas fa-comment"></i>9</button>
-                        <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i><span data-botao="contador">9</span></button>
-                        <div class="projeto__usuario"> 
-                            <button class="projeto__usuario-botao">                           
-                                <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
-                                <p class="login__name">@Harry</p>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-    </section>
+    <ul class="comunidade" data-comunidades>
+       
+    </ul>
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script src="JS/menuMobile.js"></script>
-    <script src="JS/comunidades.js"></script>
+    <script type="module" src="JS/comunidades.js"></script>
 </body>
 </html>
