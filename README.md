@@ -9,10 +9,10 @@ selecionada permiti visualizar o hightlith.
 O botão salvar armazena o projeto no localStorage.
 A página comunidades apresenta todos os projetos que estão armazenados no seu 
 localStorage já com highlight da linguagem que foi selecionada.
+Validação dos campos do projeto antes de salvar - ok
+Feedback visual do botão salvar - ok
 
 Em construção:
-Validação dos campos do projeto antes de salvar - em construção.
-Feedback visual do botão salvar - em construção.
 O botão de like da página comunidade muda a cor e a contagem, mas ainda não armazena a informação.
 Comentários - em contrução.
 Busca - em construção.

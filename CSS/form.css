@@ -87,3 +87,13 @@
         height: 3.5em;
     }
 }
+.failure{
+    color: darkred;
+    background-color: darkorange;
+    border-radius: 5px;
+}
+.sucsses{
+    color: darkolivegreen;
+    background-color: darkseagreen;
+    border-radius: 5px;
+}

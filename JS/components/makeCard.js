@@ -9,7 +9,7 @@ export const CommunityPage = ()=>{
         const card = `<article class="cartao__comunidade" data-comunidades>
 <div class="cartao__cor" style="background-color:${project.projColor};">
     <div class="cartao__cor--fundo">
-        <pre class="cartao__pre"><code class="cartao__area-code language-${project.projLiguagem}">
+        <pre class="cartao__pre"><code class="cartao__area-code language-${project.projLinguage}">
             </code></pre>
         </div>
     </div>
