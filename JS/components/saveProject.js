@@ -9,15 +9,18 @@ export const saveProject = (event)=>{
     const projectDescription = document.querySelector('[data-descricao]');
     const colorSet = document.querySelector('[data-color="inputColor"]');
     const linguagem = document.querySelector('[data-highlight="linguagem"]');
-        
+   
+    //cria o objeto que será armazenado no localStorage
     const save = {
         projCode: codeArea.textContent,
         projName: projetctTitle.value,
         projDescription: projectDescription.value,
         projLiguagem: linguagem.value,
-        projColor: colorSet.value
+        projColor: colorSet.value,
+        projLikesCounting: 0,
+        projLikes: false
     }
-
+    //armazenando no localStorage
     const projectAtualized = [...projectStorage,save];
     localStorage.setItem("project", JSON.stringify(projectAtualized));
 

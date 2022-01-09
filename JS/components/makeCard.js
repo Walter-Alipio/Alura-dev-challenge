@@ -1,4 +1,4 @@
-import { getProject } from "./components/localStorage.js";
+import { getProject } from "./localStorage.js";
 
 export const CommunityPage = ()=>{
     const projects = getProject();
@@ -9,7 +9,7 @@ export const CommunityPage = ()=>{
         const card = `<article class="cartao__comunidade" data-comunidades>
 <div class="cartao__cor" style="background-color:${project.projColor};">
     <div class="cartao__cor--fundo">
-        <pre class="cartao__pre"><code class="cartao__area-code language-javascript">${project.projCode}
+        <pre class="cartao__pre"><code class="cartao__area-code language-${project.projLiguagem}">
             </code></pre>
         </div>
     </div>
@@ -19,7 +19,8 @@ export const CommunityPage = ()=>{
         <div class="cartao__conteudo-botoes " data-cartao-botoes>
           <div>
             <button class="botao__comentarios"><i class="fas fa-comment"></i>9</button>
-            <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i><span data-botao="contador">9</span></button>
+            <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i>
+            <span data-botao="contador">${project.projLikesCounting}</span></button>
           </div>
           <div class="projeto__usuario"> 
             <button class="projeto__usuario-botao">                           
@@ -30,15 +31,14 @@ export const CommunityPage = ()=>{
     </div>
 </div>
 </article>`
-        line.innerHTML = card;
-         return line;
-    }
 
+        line.innerHTML = card;
+        line.querySelector('code').textContent = project.projCode;
+        return line;
+    }
+    //criando o card para cada projeto armazenhado no localStorage
     projects.forEach((projects)=>{
         const card = makeCard(projects);
-        console.log(card);
         community.appendChild(card);    
-
     })
-    
 }

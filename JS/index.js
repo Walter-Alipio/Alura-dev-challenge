@@ -1,5 +1,5 @@
 import { saveProject } from "./components/saveProject.js";
-import { menuMobile } from "./menuMobile.js";
+import { menuMobile } from "./components/menuMobile.js";
 
 menuMobile();
 //input color alterando a borda do text area
