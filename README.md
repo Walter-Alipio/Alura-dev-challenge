@@ -13,6 +13,6 @@ Validação dos campos do projeto antes de salvar - ok
 Feedback visual do botão salvar - ok
 
 Em construção:
-O botão de like da página comunidade muda a cor e a contagem, mas ainda não armazena a informação.
-Comentários - em contrução.
+O botão de like da página comunidade muda a cor e a contagem, mas ainda não armazena a informação no localStorage.
 Busca - em construção.
+Comentários - em contrução.

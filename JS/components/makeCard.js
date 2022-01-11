@@ -8,20 +8,20 @@ export const CommunityPage = ()=>{
         const line = document.createElement('li');
         line.classList.add('linha');
         const card = `<article class="cartao__comunidade" data-comunidades>
-<div class="cartao__cor" style="background-color:${project.projColor};">
+<div class="cartao__cor" style="background-color:${project.info.projColor};">
     <div class="cartao__cor--fundo">
-        <pre class="cartao__pre"><code class="cartao__area-code language-${project.projLinguage}">
+        <pre class="cartao__pre"><code class="cartao__area-code language-${project.info.projLinguage}">
             </code></pre>
         </div>
     </div>
     <div class="cartao__conteudo">
-        <h3 class="projeto__titulo">${project.projName}</h3>
-        <p class="projeto__descricao">${project.projDescription}</p>
+        <h3 class="projeto__titulo">${project.info.projName}</h3>
+        <p class="projeto__descricao">${project.info.projDescription}</p>
         <div class="cartao__conteudo-botoes " data-cartao-botoes>
           <div>
             <button class="botao__comentarios"><i class="fas fa-comment"></i>9</button>
             <button class="botao__curtidas" data-botao="curtidas"><i class="fas fa-heart" data-botao="coracao"></i>
-            <span data-botao="contador">${project.projLikesCounting}</span></button>
+            <span data-id="${project.id}">${project.info.projLikesCounting}</span></button>
           </div>
           <div class="projeto__usuario"> 
             <button class="projeto__usuario-botao">                           
@@ -34,7 +34,7 @@ export const CommunityPage = ()=>{
 </article>`
 
         line.innerHTML = card;
-        line.querySelector('code').textContent = project.projCode;
+        line.querySelector('code').textContent = project.info.projCode;
         return line;
     }
     //criando o card para cada projeto armazenhado no localStorage
