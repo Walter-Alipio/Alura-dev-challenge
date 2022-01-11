@@ -11,6 +11,9 @@
     border-radius: 8px;
     transition: all .4s;
 }
+.linha{
+    margin-bottom: 3rem;
+}
 .cartao__comunidade:hover{
     height: 27rem;
 }

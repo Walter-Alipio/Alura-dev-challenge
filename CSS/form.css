@@ -87,6 +87,9 @@
         height: 3.5em;
     }
 }
+.text{
+    text-align: center;
+}
 .failure{
     color: darkred;
     background-color: darkorange;

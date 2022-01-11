@@ -35,6 +35,7 @@
 
 .button__usuario{
     width: 6.625rem;
+    height: 3.5rem;
     border: none;
     border-radius: 8px;
     display: flex;

@@ -6,6 +6,7 @@ export const CommunityPage = ()=>{
 
     function makeCard(project){
         const line = document.createElement('li');
+        line.classList.add('linha');
         const card = `<article class="cartao__comunidade" data-comunidades>
 <div class="cartao__cor" style="background-color:${project.projColor};">
     <div class="cartao__cor--fundo">
