@@ -11,22 +11,18 @@ menuMobile();
     })
 
 //visualizar highlight
-    const linguagem = document.querySelector('[data-highlight="linguagem"]');
+    const linguage = document.querySelector('[data-highlight="linguagem"]');
+    const codeArea = document.querySelector('[data-highlight="window"]');
     const buttonHighlight = document.querySelector('[data-highlight="button"]');
-    const setHighlight = ()=>{
-        const codeArea = document.querySelector('[data-highlight="areaCode"]');
-        const classList = codeArea.classList;
 
-        codeArea.classList.remove(classList[3]);
-        codeArea.classList.remove(classList[2]);
-        codeArea.classList.add(linguagem.value);
-       
-        hljs.highlightElement(codeArea);
+    const setHighlight = ()=>{
+        const code = codeArea.innerText;    //pega apenas o conteúdo textual e não as tags
+        codeArea.innerHTML = `<code class="textarea hljs ${linguage.value}" contenteditable="true" aria-label="Editor de código" data-highlight="areaCode"></code>`;
+        codeArea.querySelector('code').textContent = code; //usado para manter as quebras de linha
+        hljs.highlightElement(codeArea.querySelector('code'));
     }
 
-    buttonHighlight.addEventListener('click',()=>{
-       setHighlight();
-    })
+    buttonHighlight.addEventListener('click', setHighlight);
 
     //botao salvar
     const saveButton = document.querySelector('[data-salvar]');
