@@ -35,8 +35,13 @@ export const CommunityPage = ()=>{
 
         line.innerHTML = card;
         line.querySelector('code').textContent = project.info.projCode;
+    
+        if(project.info.projLikes){
+            line.querySelector('[data-botao="coracao"]').classList.add('botao__curtidas--like');
+        }
         return line;
     }
+   
     //criando o card para cada projeto armazenhado no localStorage
     projects.forEach((projects)=>{
         const card = makeCard(projects);
