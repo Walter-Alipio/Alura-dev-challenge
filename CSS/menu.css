@@ -67,7 +67,7 @@ margin-bottom: 2rem;
     display: none;
 }
 
-@media screen and (max-device-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .menu{
         display: none;
     }

@@ -19,7 +19,7 @@
     outline: none;
 }
 
-@media screen and (max-device-width: 1024px){
+@media screen and (max-width: 1024px){
     .input{
         width: 100%;
     }
@@ -27,7 +27,7 @@
         max-width: 50%;
     }
 }
-@media screen and (max-device-width: 767px ){
+@media screen and (max-width: 767px ){
     .input-personalizacao{
         max-width: 100%;
     }
