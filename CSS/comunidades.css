@@ -19,7 +19,9 @@
 }
 @media  screen and (max-width: 767px) {
     .cartao__comunidade{
-        width: 100%;
+        width: 90vw;
+        max-width: 31rem;
+        min-width: 22rem;
         height: auto;
         margin-bottom: 2px;
     }
@@ -53,7 +55,7 @@
 
 .cartao__pre{
     width: 100%;
-    height: 90%;
+    height: 85%;
     background: none;
     border-radius: 7px;
     white-space: pre-wrap;
