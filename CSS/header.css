@@ -51,7 +51,7 @@
     display: none;
 }
 
-@media screen and (max-device-width: 1023px ){
+@media screen and (max-width: 1023px ){
     .cabecalho{
         display: flex;
         justify-content: space-between;
@@ -85,7 +85,7 @@
 }
 
 /* smartphone */
-@media screen  and (max-device-width: 767px){
+@media screen  and (max-width: 767px){
     .barra__busca{
         display: none;
     }

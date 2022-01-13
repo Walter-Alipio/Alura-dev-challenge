@@ -26,13 +26,12 @@
 <body>
     <header class="cabecalho">
         <img src="assets/Header/Logo.svg" alt="Logo Alura Dev" class="logo__alura" data-buscaMobile="logo">
-        <input type="search" class="barra__busca" placeholder="Busque por aqui">
+        <input type="search" class="barra__busca" placeholder="Busque por aqui" data-search>
         <button class="button__usuario"> 
             <img src="assets/Header/Photo.png" alt="Foto do perfil" class="foto__perfil">
             <p>Harry</p>
         </button>
 <!-- hearder mobile -->
-        <input type="search" class="barra__busca hide" data-buscaMobile="bar" placeholder="Busque por aqui">
         <div class="botoes__mobile">
             <button class="botao__busca--phone" data-buscaMobile="button"><i class="fas fa-search" data-buscaMobile="icone"></i></button>
 
@@ -58,5 +57,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script type="module" src="JS/comunidades.js"></script>
+    <script src="/JS/components/searchBar.js"></script>
 </body>
 </html>

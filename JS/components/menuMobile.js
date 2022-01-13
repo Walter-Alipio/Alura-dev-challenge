@@ -13,7 +13,7 @@ export const menuMobile = ()=>{
     })
     
     //altera o icone e abre campo de busca mobile
-    const searchBar = document.querySelector('[data-buscaMobile="bar"]');
+    const searchBar = document.querySelector('[data-search]');
     const searchButton = document.querySelector('[data-buscaMobile="button"]')
     const searchIcon = document.querySelector('[data-buscaMobile="icone"]');
     const logoAlura = document.querySelector('[data-buscaMobile="logo"]');
@@ -21,7 +21,7 @@ export const menuMobile = ()=>{
     searchButton.addEventListener('click', ()=>{
         searchIcon.classList.toggle('fa-times');
         searchBar.classList.toggle('barra__busca--bar');
-        searchBar.classList.toggle('hide');
+
         logoAlura.classList.toggle('hide');
         menu.classList.toggle('hide');
     })    
