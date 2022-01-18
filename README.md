@@ -1,4 +1,4 @@
-Projeto responsivo desenvolvido para o Alura Challenge usando HTML 5, CSS 3 e JavaScript. Com base em layout disponibilizado no figma.
+Projeto responsivo desenvolvido para o **Alura Challenge** usando **HTML 5**, **CSS 3** e **JavaScript**. Com base em layout disponibilizado no figma.
 
 Status:
 -    Na página home é possível escrever um trecho de código em javascript, html ou css
